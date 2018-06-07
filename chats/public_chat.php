@@ -48,25 +48,25 @@
 	 
 	 
      // если сообщение отослано вписываем его в базу данных
-     if (isset($_POST['message'])){
+     //if (isset($_POST['message'])){
      // получаем и обрабатываем имя и текст комментария
-     $message = addslashes(htmlspecialchars($_POST['message'], ENT_QUOTES));
+     //$message = addslashes(htmlspecialchars($_POST['message'], ENT_QUOTES));
      // генерируем сегодняшную дату
-     $time = date("d.m.y H:i");
+     //$time = date("d.m.y H:i");
 
      // если пользователь ввел текст сообщения, то добавляем все это в базу данных
-     if($message != "")
-     {
+     //if($message != "")
+     //{
      // если запрос выполнен удачно, то выводим собщение "Сообщение отправлено." 
-     $result = pg_query($db, "INSERT INTO publicchat 
-	(userid, name, photo, message, time, ssid, bssid, wifiid ) 
-	VALUES ('{$userid}', '{$name}', '{$photo}', '{$message}', '{$time}', '{$ssid}', '{$bssid}', '{$wifiid}')");  
+     //$result = pg_query($db, "INSERT INTO publicchat 
+	//(userid, name, photo, message, time, ssid, bssid, wifiid ) 
+	//VALUES ('{$userid}', '{$name}', '{$photo}', '{$message}', '{$time}', '{$ssid}', '{$bssid}', '{$wifiid}')");  
 	
-     if (!$result){
-        echo "<center><a href='../chat.php'>error, please send the message later</a></center>";
-          }
-     }
-     }
+     //if (!$result){
+       //echo "<center><a href='../chat.php'>error, please send the message later</a></center>";
+     //     }
+     //}
+    // }
 
 
 ?>
@@ -145,7 +145,7 @@
 
 
 
-<!--левое меню --------------------------------------------------------------------------------- -->
+<!--левое меню ------------------------------------------------------------------ -->
   
 
 <!-------Vertical buttons right (left) col ----------------->

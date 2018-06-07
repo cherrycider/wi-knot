@@ -54,10 +54,11 @@
      $time = date("d.m.y H:i");
 
      // если пользователь ввел текст сообщения, то добавляем все это в базу данных
-     if($message != "")
+     if(TRUE)
+//($message != "")
      {
      // если запрос выполнен удачно, то выводим собщение "Сообщение отправлено." 
-     $result = pg_query($db, "INSERT INTO publicChat 
+     $result = pg_query($db, "INSERT INTO publicchat 
 	(userid, name, photo, message, time, ssid, bssid, wifiid ) 
 	VALUES ('{$userid}', '{$name}', '{$photo}', '{$message}', '{$time}', '{$ssid}', '{$bssid}', '{$wifiid}')");  
 	
