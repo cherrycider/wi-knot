@@ -1,0 +1,322 @@
+
+html
+{
+font-family:  'Open Sans', sans-serif;
+
+
+        background:  black no-repeat fixed center;
+
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+
+} 
+
+div {
+
+    /*background: rgba(0, 170, 238, 0.5); /* Цвет фона */
+    
+    color: #fff; /* Цвет текста */
+    padding: 0; /* Поля вокруг текста */
+    text-align: center;
+    margin: 0; /* Убираем отступы на странице */
+
+    /* такая настройка заставляет центрировать div, но background не расплывается по ширине
+    display: table;
+    margin: 0 auto;
+	*/
+    
+   }
+
+
+body{
+	
+	font-size: 16px;
+	color: #868585;
+	/*background: #fdfcfb;*/
+	font-weight: normal;
+    margin: 0; /* Убираем отступы на странице */
+
+	    background:  black no-repeat fixed center;
+
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    
+}
+img{
+	max-width: 100%;
+	height: auto;
+        margin: 0; /* Убираем отступы на странице */
+}
+
+
+/* пробуем убрать лишние артифакты при выранной форме, текстовой рамке или кнопке */
+/* input:focus { outline: 0 none; } */
+/* пtextarea:focus { outline: 0 none; } */
+/* .Button:focus { outline: 0 none; } */
+
+
+input:focus { outline: 0 none; }
+
+
+textarea:focus { outline: 0 none; }
+
+
+.Button:focus { outline: 0 none; }
+
+
+.knotbackground {
+	    background:  black no-repeat fixed center;
+
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+	
+	    
+		height: 1024px;
+}
+
+.knotbackgroundsunglass {
+
+        background: rgba(0, 0, 0, 0.5); /* Цвет фона */
+        height: 1024px;
+
+}
+
+
+.vertical-menu-padding{
+	position: fixed; /* Фиксированное положение */
+	left: 0; top: 0; bottom:0;/* Левый нижний угол */
+	width: 150px;
+	overflow: hidden;
+        overflow-y: auto;  /*scroll когда переполнено на вкртикальных не работает*/
+	white-space:nowrap;
+		
+		
+	margin: 0px; /* Убираем отступы на странице */
+	padding: 16px; /* Поля вокруг текста */
+	margin-top: 0; 
+	margin-bottom: 0;
+	background: rgba(0, 0, 0, 0.7) !important; /* Цвет фона */
+	
+}
+
+.btn-group-vertical {
+	
+
+    
+        white-space:nowrap;
+}
+
+
+.knot-vert-btn {
+
+        display: inline-block;
+        vertical-align: left;
+        background: rgba(0, 0, 0, 0) ; /* Цвет фона */
+        color: #fff; /* Цвет текста */
+}
+
+
+
+
+
+
+
+.content-padding {
+     
+    position: relative; /* нужно чтобы контент центрировался внутри  padding (position: absolute;) */
+    margin-left: 150px; /* отступ слева для меню*/
+}
+
+
+
+
+
+
+.knot-header {
+     
+    position: absolute; /* Фиксированное положение */
+    left: 0; top: 0; /* Левый нижний угол */
+    width: 100%;
+    margin: 0; /* Убираем отступы на странице */
+    padding: 0; /* Поля вокруг текста */
+    background: rgba(0, 0, 0, 0) !important; /* Цвет фона */
+}
+
+.ssid {
+    position: fixed; /* Фиксированное положение */
+    left: 0; top: 0; /* Левый верхний угол */
+    width: 100%;
+    margin: 0; /* Убираем отступы на странице */
+    padding: 0; /* Поля вокруг текста */
+    background: rgba(0, 0, 0, 0.7) !important; /* Цвет фона */
+}
+
+.ssid  h3{
+
+
+    margin: 0; /* Убираем отступы на странице */
+    padding: 0; /* Поля вокруг текста */
+   
+}
+
+.logo {  
+    /*position: fixed; /* Фиксированное положение */
+    padding: 0; /* Поля вокруг текста */
+    margin: 0; /* Убираем отступы на странице */
+    margin-top: 26px; /* Убираем отступы на странице */
+    background: rgba(0, 0, 0, 0.7); /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    width: 100%;
+   }
+
+
+
+
+
+
+.content {   
+        
+        
+      background: rgba(0, 0, 0, 0); /* Цвет фона */
+      margin: 0; /* Убираем отступы на странице */
+      padding: 0; /* Поля вокруг текста */
+      padding-top: 160px; 
+}
+
+
+.blankfootergap {
+
+    height:60px;
+    background: rgba(0, 0, 0, 0) !important; /* Цвет фона */
+    margin: 0; /* Убираем отступы на странице */
+    padding: 0; /* Поля вокруг текста */
+   
+
+}
+
+
+
+
+
+.horizontal-menu-padding{
+	
+	
+	position: fixed; /* Фиксированное положение */
+	right: 0; left: 0; bottom:0;/* Левый нижний угол */
+	height: 120px;
+	margin-top: 16px; /* Убираем отступы на странице */
+	padding: 16px; /* Поля вокруг текста */
+	margin-left: 0; 
+	margin-right: 0;
+	margin-bottom: 0;
+	background: rgba(0, 0, 0, 0.7) !important; /* Цвет фона */
+	
+}
+.horizontal-menu {
+	
+	right: 0; bottom: 60px;/* Левый нижний угол */
+	background: rgba(0, 0, 0, 0) !important; /* Цвет фона */
+    
+        overflow: hidden;
+        overflow-x: auto;  /*scroll когда переполнено*/
+    
+        white-space:nowrap;
+
+
+
+}
+
+.knot-horiz-btn {
+
+        display: inline-block;
+        vertical-align: top;
+
+        background: rgba(0, 0, 0, 0) ; /* Цвет фона */
+        color: #fff; /* Цвет текста */
+}
+
+
+
+.pagefooter{
+    position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    margin: 0; /* Убираем отступы на странице */
+    padding: 0; /* Поля вокруг текста */
+    
+    width: 100%; /* Ширина слоя */
+    background: rgba(0, 0, 0, 0.7) !important; /* Цвет фона */
+    
+}
+
+.pagefooter h3 {  /*если поменять на div то  for IE6*/
+    margin: 0; /* Убираем отступы на странице */
+    padding: 0; /* Поля вокруг текста */
+    background: rgba(0, 0, 0, 0); /* Цвет фона */
+    
+    
+   }
+
+
+
+a:link, a:visited, a:hover, a:active {  /* links not underlined and white*/
+
+    color: white  !important;
+    text-decoration: none !important;
+    /*background: rgba(0, 0, 0, 0.3); /* Цвет фона */
+    /*margin: 8px; /* Поля вокруг текста */
+   }
+
+
+
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+
+/* Landscape */
+@media all and (min-aspect-ratio: 1/1){ 
+
+.horizontal-menu-padding {display: none;}
+.logo {display: none;} 
+
+
+} 
+
+/* Portrait */
+@media all and (max-aspect-ratio: 1/1){
+
+.vertical-menu-padding {display: none;} 
+.content-padding {margin-left: 0;} /* отступ слева для меню отменяем при portrait */
+
+ }
+
+
+@media all and (orientation: landscape){}
+
+
+

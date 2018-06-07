@@ -1,0 +1,594 @@
+
+html
+{
+font-family:  'Open Sans', sans-serif;
+
+
+        background:  black no-repeat fixed center;
+
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+
+} 
+
+div {
+
+    /*background: rgba(0, 170, 238, 0.5); /* Цвет фона */
+    
+    color: white; /* Цвет текста */
+    padding: 0; /* Поля вокруг текста */
+    text-align: center;
+    margin: 0; /* Убираем отступы на странице */
+
+    /* такая настройка заставляет центрировать div, но background не расплывается по ширине
+    display: table;
+    margin: 0 auto;
+	*/
+    
+   }
+
+h2 h4{
+    color: white; /* Цвет текста */
+}
+
+
+body{
+	
+	font-size: 16px;
+	/*color: #868585;*/
+	/*background: #fdfcfb;*/
+	font-weight: normal;
+        margin: 0; /* Убираем отступы на странице */
+
+	    background:  black no-repeat fixed center;
+
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+        margin: 0; /* Убираем отступы на странице */
+}
+
+
+/* выравнивание всех ячеек  */
+
+form {
+  text-align: center;
+  color: white; /* Цвет текста */
+}
+
+input { 
+  text-align: center;
+  color: black; /* Цвет текста */ 
+}
+textarea  
+{  
+   font-family:"sans-serif", Arial;  
+   font-size: 85%;
+   color: black; /* Цвет текста */
+}
+   
+  table {
+    /*background: black; /* Цвет фона таблицы */
+    color: white; /* Цвет текста */
+   }
+
+   tr, th {
+
+    text-align: center; /* выравнивание всех ячеек  */
+   }
+
+
+
+
+/* пробуем убрать лишние артифакты при выранной форме, текстовой рамке или кнопке */
+/* input:focus { outline: 0 none; } */
+/* пtextarea:focus { outline: 0 none; } */
+/* .Button:focus { outline: 0 none; } */
+
+
+input:focus { outline: 0 none; }
+
+
+textarea:focus { outline: 0 none; }
+
+
+.Button:focus { outline: 0 none; }
+
+
+.knotbackground {
+	    background:  black no-repeat fixed center;
+
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+
+	/*
+	position: fixed;  Фиксированное положение 
+	left: 0; top: 0; bottom:0; right:0; 
+	*/
+
+
+		height: 1024px;
+
+		
+		
+}
+
+.knotbackgroundsunglass {
+
+        background: rgba(0, 0, 0, 0.4); /* Цвет фона */
+
+
+	/*
+	position: fixed;  Фиксированное положение 
+	left: 0; top: 0; bottom:0; right:0; 
+	*/
+
+
+		height: 1024px;
+
+
+
+
+
+   
+}
+
+
+.vertical-menu-padding{
+	position: fixed; /* Фиксированное положение */
+	left: 0; top: 0; bottom:0;/* Левый нижний угол */
+	width: 150px;
+	overflow: hidden;
+    overflow-y: auto;  /*scroll когда переполнено на вкртикальных не работает*/
+	white-space:nowrap;
+		
+		
+	margin: 0px; /* Убираем отступы на странице */
+	padding: 16px; /* Поля вокруг текста */
+	margin-top: 0; 
+	margin-bottom: 0;
+	background: rgba(0, 0, 0, 0.7) !important; /* Цвет фона */
+	
+}
+
+.btn-group-vertical {
+	
+
+    
+        white-space:nowrap;
+}
+
+
+.knot-vert-btn {
+
+        display: inline-block;
+        vertical-align: left;
+        background: rgba(0, 0, 0, 0) ; /* Цвет фона */
+        color: #fff; /* Цвет текста */
+}
+
+
+
+
+
+
+
+.content-padding {
+     
+   /* position: relative;  нужно чтобы контент центрировался внутри  padding (position: absolute;) */
+    margin-left: 0; /* отступ слева для меню*/
+
+}
+
+
+.knot-header {
+     
+    position: absolute; 
+    left: 0; right: 0; top: 0; 
+    margin: 0; 
+    padding: 0; 
+    background: rgba(0, 0, 0, 0) !important;
+}
+
+.ssid {
+    position: fixed; /* Фиксированное положение */
+    left: 0; right: 0; top: 0; /* Левый верхний угол */
+    margin: 0; /* Убираем отступы на странице */
+    padding: 0; /* Поля вокруг текста */
+    background: rgba(0, 0, 0, 0.7) !important; /* Цвет фона */
+}
+
+.ssid  h3{
+
+
+    margin: 0; /* Убираем отступы на странице */
+    padding: 0; /* Поля вокруг текста */
+   
+}
+
+.logo {  
+    /*position: fixed; /* Фиксированное положение */
+    padding: 0; /* Поля вокруг текста */
+    margin: 0; /* Убираем отступы на странице */
+    margin-top: 26px; /* Убираем отступы на странице */
+    background: rgba(0, 0, 0, 0.7); /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    width: 100%;
+   }
+
+
+
+
+
+
+.content {   
+        
+        
+      background: rgba(0, 0, 0, 0); /* Цвет фона */
+      margin: 0; /* Убираем отступы на странице */
+      padding: 0; /* Поля вокруг текста */
+      /*padding-top: 160px; */
+	  padding-top: 30px;
+	  
+
+}
+
+
+.knot-content-btn {
+
+        display: inline-block;
+        vertical-align: top;
+        padding: 5px; /* Поля вокруг текста */
+        background: rgba(0, 0, 0, 0.9) ; /* Цвет фона */
+        color: #fff; /* Цвет текста */
+}
+
+
+.blankfootergap {
+
+    /*height:60px;*/
+    background: rgba(0, 0, 0, 0) !important; /* Цвет фона */
+    margin: 0; /* Убираем отступы на странице */
+    padding: 0; /* Поля вокруг текста */
+    text-align: right;
+    margin-top: 120px;
+}
+
+.btn-in-row{
+	margin: 5px;
+	float: center;
+}
+
+.knot-btn-big{
+	font-size: 25px;
+}
+
+.fixed-title {
+	position: fixed; /* Фиксированное положение */
+	right: 0; left: 0; top:20px;/* располагаем под ssid панелью */
+}
+
+
+/*  CHAT */
+
+.chat-area {
+			
+	position: fixed; /* Фиксированное положение */
+	right: 0; left: 0; bottom:120px;  top:80px;/* располагаем над горизонтальным меню */
+/*	overflow: scroll;
+	overflow-y: auto;
+	white-space:nowrap;	*/
+
+}
+
+
+
+.rounded{
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+}
+
+.chatLineHolder{
+
+	position: fixed; /* Фиксированное положение */
+	right: 0; left: 0; bottom:155px;  top:80px;/* располагаем над горизонтальным меню */
+        margin: 5px;
+	background-color:rgba(0, 0, 0, 0.2) ;
+/*	border:1px solid #111111;
+	
+        overflow-y: scroll!important;
+	overflow-scrolling: auto !important;
+        -webkit-overflow-scrolling: auto !important;
+*/
+
+
+        overflow:auto; 
+}
+
+.msgln {
+       text-align:left;
+       margin-left: 20px;
+}
+
+.send-form-padding {
+	
+		
+	position: fixed; /* Фиксированное положение */
+	right: 0; left: 0; bottom:120px;/* располагаем над горизонтальным меню */
+	height: 35px; 
+/*	margin-top: 0;   
+	padding: 5px; 
+	margin-left: 0; 
+	margin-right: 0;
+	margin-bottom: 0;          */
+	background: rgba(0, 0, 0, 0) !important; /* Цвет фона */
+}
+
+
+
+/* Chats сообщения для старого ajax чата , удаляем */
+
+/*
+#chatLineHolder{
+	background-color:#202020;
+	border:1px solid #111111;
+	height:360px;
+	width:350px;
+	margin-bottom:20px;
+}
+
+.chat{
+	background:url('../img/chat_line_bg.jpg') repeat-x #d5d5d5; 
+
+	background:repeat-x rgba(0, 0, 0, 0.7);
+	min-height:24px;
+	padding:6px;
+	border:1px solid #FFFFFF;
+	
+	padding:8px 6px 4px 37px;
+	position:relative;
+	margin:0 10px 10px 0;
+}
+
+.chat:last-child{
+	margin-bottom:0;
+}
+
+.chat span{
+	color:#777777;
+	text-shadow:1px 1px 0 #FFFFFF;
+	font-size:12px;
+}
+
+.chat .text{
+	color:#444444;
+	display:inline-block;
+	font-size:15px;
+	overflow:hidden;
+	vertical-align:top;
+	width:190px;
+}
+
+
+.chat .gravatar{
+	background:url('http://www.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?size=23') no-repeat;
+	left:7px;
+	position:absolute;
+	top:7px;
+}
+
+
+.chat img{
+	display:block;
+	visibility:hidden;
+}
+
+.chat .time{
+	position:absolute;
+	right:10px;
+	top:12px;
+	font-size:11px;
+}
+
+.chat .author{
+	margin-right:6px;
+	font-size:11px;
+}
+
+*/
+
+/* Overloading the default styles of jScrollPane 
+
+
+.jspVerticalBar{
+	background:none;
+	width:20px;
+}
+
+.jspTrack{
+	background-color:#202020;
+	border:1px solid #111111;
+	width:3px;
+	right:-10px;
+}
+
+.jspDrag {
+	background:url('../img/slider.png') no-repeat;
+	width:20px;
+	left:-9px;
+	height:20px !important;
+	margin-top:-5px;
+}
+
+.jspDrag:hover{
+	background-position:left bottom;
+}
+*/
+
+/* HORIZONTAL MENU  */
+
+.horizontal-menu-padding{
+	
+	
+	position: fixed; 
+	right: 0; left: 0; bottom:0;
+	height: 120px;
+	margin-top: 16px; 
+	padding: 16px; 
+	margin-left: 0; 
+	margin-right: 0;
+	margin-bottom: 0;
+	background: rgba(0, 0, 0, 0.7) !important; 
+	
+}
+.horizontal-menu {
+	
+	right: 0; bottom: 60px;
+	background: rgba(0, 0, 0, 0) !important;
+    
+        overflow: hidden;
+        overflow-x: auto;  /*scroll когда переполнено*/
+    
+        white-space:nowrap;
+
+
+
+}
+
+
+.knot-horiz-btn {
+
+        display: inline-block;
+        vertical-align: center;
+
+        background: rgba(0, 0, 0, 0) ;
+        color: #fff; /* Цвет текста */
+}
+
+
+
+.pagefooter{
+    position: fixed; /* Фиксированное положение */
+    left: 0; right: 0; bottom: 0; /* Левый нижний угол */
+    margin: 0; /* Убираем отступы на странице */
+    padding: 0; /* Поля вокруг текста */
+    height: 30px;    
+    background: rgba(0, 0, 0, 0) !important; /* Цвет фона */
+    
+}
+
+.pagefooter h3 {  /*если поменять на div то  for IE6*/
+    margin: 0; /* Убираем отступы на странице */
+    padding: 0; /* Поля вокруг текста */
+    background: rgba(0, 0, 0, 0); /* Цвет фона */
+    
+    
+   }
+
+
+
+a:link, a:visited, a:hover, a:active {  /* links not underlined and white*/
+
+    color: white;
+    text-decoration: none;
+    /*background: rgba(0, 0, 0, 0.3); /* Цвет фона */
+    /*margin: 8px; /* Поля вокруг текста */
+   }
+
+
+   
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+
+/* Landscape */
+@media all and (min-aspect-ratio: 1/1){ 
+
+/*.horizontal-menu-padding {display: none;}
+.logo {display: none;} */
+
+
+} 
+
+/* Portrait */
+@media all and (max-aspect-ratio: 1/1){
+
+/*.vertical-menu-padding {display: none;} 
+.content-padding {margin-left: 0;} /* отступ слева для меню отменяем при portrait */
+
+ }
+
+@media screen and (min-aspect-ratio: 13/9) { 
+/* landscape styles here */
+
+.horizontal-menu-padding {left: 150px; height: 30px;}
+.horizontal-menu {display: none !important;}
+.logo {display: none !important;} 
+.logo-in-content {display: none !important;} 
+.content {padding-top: 30px;}
+.send-form-padding {margin-left: 150px; bottom: 31px;}
+.content-padding {margin-left: 150px;} /* отступ слева для меню отменяем при portrait */
+.chatLineHolder {margin-left: 155px; bottom: 65px;}
+.chat-area {margin-left: 150px; bottom: 60px;}
+.fixed-title {margin-left: 150px;}
+.knot-header {left: 150px;}
+.ssid {left: 150px;}
+.ssid a {float: center;}
+.pagefooter {left: 150px;}
+}
+
+@media screen and (max-aspect-ratio: 13/9) { 
+/* portrait styles here */
+
+.vertical-menu-padding {display: none !important;} 
+
+
+}
+
+
+@media all and (orientation: landscape){
+
+
+
+}
+
+@media all and (orientation: portrait){
+
+
+
+}
+
+
