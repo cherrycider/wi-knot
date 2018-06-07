@@ -14,8 +14,8 @@ header("Pragma: no-cache");
     session_start();
 
     // если имя не установлено, редирект на страницу авторизации 
-    //($_POST['userID'] проходит сразу после регистрации со страницы user_save.php)
-    if ((!isset($_SESSION['userID'])) and (!isset($_POST['userID']))){header("Location: ../user/user_login.php");}
+    //($_POST['userid'] проходит сразу после регистрации со страницы user_save.php)
+    if ((!isset($_SESSION['userid'])) and (!isset($_POST['userid']))){header("Location: ../user/user_login.php");}
 
 
 
@@ -46,15 +46,15 @@ header("Pragma: no-cache");
     // файл db_connection.php должен быть в той же папке, что и все остальные, 
     //если это не так, то просто измените путь 
 
-    if (isset($_SESSION['userID'])) {$userID = $_SESSION['userID'];}
-    if (isset($_POST['userID'])) {$userID = $_POST['userID']; $_SESSION['userID']= $_POST['userID']; }
-    $query = "SELECT * FROM people WHERE userID='$userID'";
-    $result = mysqli_query($db, $query);
+    if (isset($_SESSION['userid'])) {$userid = $_SESSION['userid'];}
+    if (isset($_POST['userid'])) {$userid = $_POST['userid']; $_SESSION['userid']= $_POST['userid']; }
+    $query = "SELECT * FROM people WHERE userid='$userid'";
+    $result = pg_query($db, $query);
     // проверяем удачно ли соединились с базой 
     if (!$result) {die("sorry, something went wrong on the website, database query failed");}
  
     //извлекаем из базы все данные о пользователе с введенным логином
-    $myrow = mysqli_fetch_array($result);
+    $myrow = pg_fetch_array($result);
 	
 	//используем значения для отображения на сайте, например  в тегах php -  echo $myrow['name'] 
 	
@@ -68,16 +68,16 @@ header("Pragma: no-cache");
 	if (isset($_POST['button_save'])) { $button_save = $_POST['button_save'];}
 	if ($button_save == 'saved') {
 		
-		$photo_file_name = $myrow['userID'];
-		// если еще фото не записано в базу или не такое же как userID
-                //if (!isset($myrow['photo']) or ($myrow['photo']!='') or ($myrow['photo']!=$myrow['userID'])){
+		$photo_file_name = $myrow['userid'];
+		// если еще фото не записано в базу или не такое же как userid
+                //if (!isset($myrow['photo']) or ($myrow['photo']!='') or ($myrow['photo']!=$myrow['userid'])){
          
                 // еcли фото существует  
                 if (file_exists('user_photos/'. $photo_file_name .'.png')) {
 		
-			//дописываем имя файла в бд пользователя с таким же userID
-	            $query = "UPDATE people SET photo = '$photo_file_name' WHERE userID='$photo_file_name'";
-                $result = mysqli_query ($db, $query);
+			//дописываем имя файла в бд пользователя с таким же userid
+	            $query = "UPDATE people SET photo = '$photo_file_name' WHERE userid='$photo_file_name'";
+                $result = pg_query ($db, $query);
 
             // проверяем удачно ли соединились с базой 
                 if (!$result) {die("sorry, something went wrong with the website, database update failed");}
@@ -88,7 +88,7 @@ header("Pragma: no-cache");
 	    
             //  да и логинимся заодно
            //если пароли совпадают, то запускаем пользователю сессию! Можете его поздравить, он вошел!
-                 $_SESSION['userID']=$myrow['userID'];
+                 $_SESSION['userid']=$myrow['userid'];
                  $_SESSION['email']=$myrow['email'];
                  $_SESSION['name']=$myrow['name'];	
                  $_SESSION['id']=$myrow['id'];
@@ -224,8 +224,8 @@ header("Pragma: no-cache");
 
 	  <?php 
 	  
-	  if (file_exists('user_photos/'. $userID .'.png')) 
-                 { $photo_src = $userID;} 
+	  if (file_exists('user_photos/'. $userid .'.png')) 
+                 { $photo_src = $userid;} 
 	  
 	  else { $photo_src="defpic" ;};
 	  
@@ -257,8 +257,8 @@ header("Pragma: no-cache");
                   <input type="hidden" class="avatar-src" name="avatar_src">
                   <input type="hidden" class="avatar-data" name="avatar_data">
 				  
-<!--	передаем имя файла		  $user_filename = $userID   -->
-<!--   вручную                  <input type="text" class="avatar-userID" name="avatar_userID">  -->
+<!--	передаем имя файла		  $user_filename = $userid   -->
+<!--   вручную                  <input type="text" class="avatar-userid" name="avatar_userid">  -->
 				  
                   <label for="avatarInput">Local upload</label>
                   <input type="file" class="avatar-input" id="avatarInput" name="avatar_file">

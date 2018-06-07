@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc5833310b25797bf4de6bfc699b694e",
+    "content-hash": "4c900335ac651fd365c25393c935382e",
     "packages": [
         {
             "name": "csanquer/pdo-service-provider",

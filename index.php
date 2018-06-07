@@ -13,7 +13,7 @@
     if ((!isset($_SESSION['photo'])) or ($_SESSION['photo'] === "")){header("Location: crop/user_photo.php");}
 	}
 
-	$userID = $_SESSION['userID'];
+	$userid = $_SESSION['userid'];
 	$name = $_SESSION['name'];
 	// пока по умолчанию ставим эти значения, дальше посмотрим... (в index.php и в wifi_hotspot.php)
 	$ssid = "couchsurf";
@@ -24,27 +24,27 @@
 	if (isset($_POST['exitssid'])) 
 	{if($_POST['exitssid']=="exit")
 	 {
-		 unset($_SESSION['SSID']);
-		 unset($_SESSION['BSSID']);
+		 unset($_SESSION['ssid']);
+		 unset($_SESSION['bssid']);
 	    
 
 	 } 
 	}
 	 	
 	// если известна wifi сеть устанавливаем значения и добавляем в сессию 
-	if ((isset($_SESSION['SSID'])) and (isset($_SESSION['BSSID'])))
+	if ((isset($_SESSION['ssid'])) and (isset($_SESSION['bssid'])))
 	{
-	$ssid = $_SESSION['SSID'];
-	$bssid = $_SESSION['BSSID'];		
+	$ssid = $_SESSION['ssid'];
+	$bssid = $_SESSION['bssid'];		
 	}
 	
 	// если только что вошли в wifi сеть прописываем значения и создаем таблицы wifi сети, если нет
-	if ((isset($_POST['SSID'])) and (isset($_POST['BSSID'])))
+	if ((isset($_POST['ssid'])) and (isset($_POST['bssid'])))
 	{
-	$ssid = $_POST['SSID'];
-	$bssid = $_POST['BSSID'];		
-    $_SESSION['SSID'] = $ssid;
-    $_SESSION['BSSID'] = $bssid;
+	$ssid = $_POST['ssid'];
+	$bssid = $_POST['bssid'];		
+    $_SESSION['ssid'] = $ssid;
+    $_SESSION['bssid'] = $bssid;
 
     // заносим сеть в таблицу wifiNetworks, если нет и в таблице people ставим online  пользователю
 
@@ -54,20 +54,20 @@
     // формируем уникальный id  для wifi сети
 	$wifiID = $ssid.$bssid;
     // проверяем есть ли такая сеть в базе
-	$result = mysqli_query($db, "SELECT id FROM wifiNetworks WHERE wifiID='$wifiID'");	
-    $mywifirow = mysqli_fetch_array($result);
+	$result = pg_query($db, "SELECT id FROM wifiNetworks WHERE wifiID='$wifiID'");	
+    $mywifirow = pg_fetch_array($result);
     if (empty($mywifirow['id'])) {
 	// если такой сети нет, то сохраняем данные
-    $query = "INSERT INTO wifiNetworks (SSID, BSSID, wifiID) VALUES('{$ssid}', '{$bssid}', '{$wifiID}')";
-    $result2 = mysqli_query ($db, $query);
+    $query = "INSERT INTO wifiNetworks (ssid, bssid, wifiID) VALUES('{$ssid}', '{$bssid}', '{$wifiID}')";
+    $result2 = pg_query ($db, $query);
     // проверяем, есть ли ошибки
-    if ($result2=='TRUE'){
+    if ($result2=='FALSE'){
     echo "there is some error on the website, {$name}, you cannot use this wifi network";		
 	}	
 	}	
 	// добавляем сеть в запись пользователя
-    $query = "UPDATE people SET SSID = '$ssid', BSSID = '$bssid', wifiID = '$wifiID',  onlineStatus = 'online'  WHERE userID = '$userID'" ;
-    $result3 = mysqli_query ($db, $query);
+    $query = "UPDATE people SET ssid = '$ssid', bssid = '$bssid', wifiID = '$wifiID',  onlineStatus = 'online'  WHERE userid = '$userid'" ;
+    $result3 = pg_query ($db, $query);
 
     // проверяем удачно ли соединились с базой 
     if (!$result3) {exit("sorry, something went wrong with the website, database update failed");}
@@ -203,16 +203,16 @@
 <div class="content">
 
 <?php
- if ((!isset($_SESSION['SSID'])) or  (!isset($_SESSION['BSSID'])))
+ if ((!isset($_SESSION['ssid'])) or  (!isset($_SESSION['bssid'])))
 {
 echo("
   <div><h3>please confirm  that you are now using this wifi hotspot:</h3></div>
     <form action='index.php' method='post'>
      <p>
-    <input name='SSID' type='text' hint='{$ssid}' size='30' maxlength='30' value='{$ssid}'>
+    <input name='ssid' type='text' hint='{$ssid}' size='30' maxlength='30' value='{$ssid}'>
 	</p>
 	<p>
-    <input name='BSSID' type='text' hint='{$bssid}' size='30' maxlength='30' value='{$bssid}'>	
+    <input name='bssid' type='text' hint='{$bssid}' size='30' maxlength='30' value='{$bssid}'>	
     </p>
 	<p>
     

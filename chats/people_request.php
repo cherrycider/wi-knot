@@ -5,10 +5,10 @@
     // вся процедура работает на сессиях. Именно в ней хранятся данные  пользователя, пока он находится на сайте.
     // Очень важно запустить их в  самом начале странички!!!
 
-	if ((isset($_SESSION['SSID'])) and (isset($_SESSION['BSSID']))) {
-	$ssid = $_SESSION['SSID'];
-	$bssid = $_SESSION['BSSID'];
-	$wifiID = $ssid.$bssid;
+	if ((isset($_SESSION['ssid'])) and (isset($_SESSION['bssid']))) {
+	$ssid = $_SESSION['ssid'];
+	$bssid = $_SESSION['bssid'];
+	$wifiid = $ssid.$bssid;
 	} else {header("Location: ../index.php");}
 
  	
@@ -21,16 +21,16 @@
   //--------------------------------------------------------------------------
   // 2) Query database for data
   //--------------------------------------------------------------------------	
-    $query = "SELECT * FROM people WHERE wifiID='$wifiID'";
-    $result = mysqli_query($db, $query);
+    $query = "SELECT * FROM people WHERE wifiid='$wifiid'";
+    $result = pg_query($db, $query);
     // проверяем удачно ли соединились с базой 
     if (!$result) {die("sorry, something went wrong on the website, database query failed");}
  
     //fetch result
-	//$array = mysqli_fetch_row($result);  
+	//$array = pg_fetch_row($result);  
 
    /* выборка данных и помещение их в массив */
-    while ($person = mysqli_fetch_row($result)) {
+    while ($person = pg_fetch_row($result)) {
  
          $people[]=$person;
 

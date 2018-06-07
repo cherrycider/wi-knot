@@ -5,7 +5,7 @@
     session_start();
 
     // если имя не установлено, редирект на страницу авторизации  
-    if (!isset($_SESSION['userID'])){header("Location: ../user/user_login.php");}
+    if (!isset($_SESSION['userid'])){header("Location: ../user/user_login.php");}
 
 
 
@@ -241,7 +241,7 @@ $crop = new CropAvatar(
   isset($_POST['avatar_src']) ? $_POST['avatar_src'] : null,
   isset($_POST['avatar_data']) ? $_POST['avatar_data'] : null,
   isset($_FILES['avatar_file']) ? $_FILES['avatar_file'] : null,
-  $_SESSION['userID']
+  $_SESSION['userid']
 );
 
 $response = array(

@@ -13,10 +13,10 @@
     if (!isset($_SESSION['name'])){
 		header("Location: ../user/user_login.php");}
 
-	if ((isset($_SESSION['SSID'])) and (isset($_SESSION['BSSID']))) {
-	$ssid = $_SESSION['SSID'];
-	$bssid = $_SESSION['BSSID'];
-	$wifiID = $ssid.$bssid;
+	if ((isset($_SESSION['ssid'])) and (isset($_SESSION['bssid']))) {
+	$ssid = $_SESSION['ssid'];
+	$bssid = $_SESSION['bssid'];
+	$wifiid = $ssid.$bssid;
 	} else {header("Location: ../index.php");}
 		
 	
@@ -29,17 +29,17 @@
     //если это не так, то просто измените путь 
 
     $personID = $_GET['id'];
-    $query = "SELECT * FROM people WHERE userID='$personID'";
-    $result = mysqli_query($db, $query);
+    $query = "SELECT * FROM people WHERE userid='$personID'";
+    $result = pg_query($db, $query);
     // проверяем удачно ли соединились с базой 
     if (!$result) {die("sorry, something went wrong on the website, database query failed");}
  
     //извлекаем из базы все данные о пользователе с введенным логином
-    $myrow = mysqli_fetch_array($result);
+    $myrow = pg_fetch_array($result);
     
     //используем значения для отображения на сайте, например  в тегах php -  echo $myrow['name'] 
 	
-     $userID = $myrow['userID'];
+     $userid = $myrow['userid'];
      $email = $myrow['email'];
      $name = $myrow['name'];
      $password = $myrow['password'];

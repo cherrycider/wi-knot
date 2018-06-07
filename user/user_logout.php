@@ -91,24 +91,24 @@
 
 <?php
     
-	if(isset($_SESSION['userID'])){$userID = $_SESSION['userID'];}
+	if(isset($_SESSION['userid'])){$userid = $_SESSION['userid'];}
     
     //обнуляем сессию !
-    unset($_SESSION['userID']);
+    unset($_SESSION['userid']);
     unset($_SESSION['email']);
     unset($_SESSION['name']);	
     unset($_SESSION['photo']);
     unset($_SESSION['id']);
-    unset($_SESSION['SSID']);
-    unset($_SESSION['BSSID']);	
+    unset($_SESSION['ssid']);
+    unset($_SESSION['bssid']);	
 // TODO подключиться к базе и поставить статус OFFLINE
 
     // подключаемся к базе
     include ("../db_connection.php");
     // файл db_connection.php должен быть в той же папке, что и все остальные, если это не так, то просто измените путь 
 	// добавляем сеть в запись пользователя
-    $query = "UPDATE people SET  onlineStatus = 'offline'  WHERE userID = '$userID'" ;
-    $result3 = mysqli_query ($db, $query);
+    $query = "UPDATE people SET  onlineStatus = 'offline'  WHERE userid = '$userid'" ;
+    $result3 = pg_query ($db, $query);
 
     // проверяем удачно ли соединились с базой 
     if (!$result3) {exit("sorry, something went wrong with the website, database update failed");}
