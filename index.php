@@ -52,13 +52,13 @@
     include ("db_connection.php");
     // файл db_connection.php должен быть в той же папке, что и все остальные, если это не так, то просто измените путь 
     // формируем уникальный id  для wifi сети
-	$wifiID = $ssid.$bssid;
+	$wifiid = $ssid.$bssid;
     // проверяем есть ли такая сеть в базе
-	$result = pg_query($db, "SELECT id FROM wifiNetworks WHERE wifiID='$wifiID'");	
+	$result = pg_query($db, "SELECT id FROM wifiNetworks WHERE wifiid='$wifiid'");	
     $mywifirow = pg_fetch_array($result);
     if (empty($mywifirow['id'])) {
 	// если такой сети нет, то сохраняем данные
-    $query = "INSERT INTO wifiNetworks (ssid, bssid, wifiID) VALUES('{$ssid}', '{$bssid}', '{$wifiID}')";
+    $query = "INSERT INTO wifiNetworks (ssid, bssid, wifiid) VALUES('{$ssid}', '{$bssid}', '{$wifiid}')";
     $result2 = pg_query ($db, $query);
     // проверяем, есть ли ошибки
     if ($result2=='FALSE'){
@@ -66,7 +66,7 @@
 	}	
 	}	
 	// добавляем сеть в запись пользователя
-    $query = "UPDATE people SET ssid = '$ssid', bssid = '$bssid', wifiID = '$wifiID',  onlineStatus = 'online'  WHERE userid = '$userid'" ;
+    $query = "UPDATE people SET ssid = '$ssid', bssid = '$bssid', wifiid = '$wifiid',  onlineStatus = 'online'  WHERE userid = '$userid'" ;
     $result3 = pg_query ($db, $query);
 
     // проверяем удачно ли соединились с базой 
