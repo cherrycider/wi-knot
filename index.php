@@ -17,7 +17,7 @@
 	$name = $_SESSION['name'];
 	// пока по умолчанию ставим эти значения, дальше посмотрим... (в index.php и в wifi_hotspot.php)
 	$ssid = "couchsurf";
-	$bssid = "00:00:00:00:00:00";
+	$bssid = "000000000000";
 	
 	
 	// если прилетел из wifi_hotspot.php "exitssid" выходим из wifi сети
