@@ -46,7 +46,7 @@
      $photo_src = "../crop/user_photos/" . $photo . ".png";
 	 
 	 
-	 
+     // this snippet was all commented:
      // если сообщение отослано вписываем его в базу данных
      if (isset($_POST['message'])){
      // получаем и обрабатываем имя и текст комментария
@@ -68,6 +68,7 @@
      }
       }
 
+     // this snippet was all commented -end
 
 ?>
 
@@ -83,8 +84,9 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>discuss this place</title>
 	
-
+    <!--
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    -->
 	
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -289,8 +291,8 @@ $(document).ready(function(){
 	$("#submitmsg").click(function(){	
 		var clientmsg = $("#usermsg").val();
 		//we submit the message to the log.html
-                // TEMP text->message
-		$.post("chat_post.php", {message: clientmsg});				
+                
+		$.post("chat_post.php", {text: clientmsg});				
 		$("#usermsg").attr("value", "");
 		return false;
     });
@@ -306,7 +308,8 @@ $("#chatbox").animate({ scrollTop: scrollHeight }, 'normal');
 		var oldscrollHeight = $("#chatbox").attr("scrollHeight") - 20;
 	
     //-----------------------------------------------------------------------
-    // 2) Send a http request with AJAX http://api.jquery.com/jQuery.ajax/
+    // 2) Send a http request with AJAX http://api.jquery.com/jQuery.ajax/ to chat_request.php
+    //    and receives chats in json data
     //-----------------------------------------------------------------------
     $.ajax({                                      
       url: "chat_request.php",         //the script to call to get data          
