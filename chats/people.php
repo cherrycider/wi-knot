@@ -62,8 +62,10 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>people</title>
 	
-
+    <!--
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+     -->
+
 	
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
