@@ -21,7 +21,9 @@
   //--------------------------------------------------------------------------
   // 2) Query database for data
   //--------------------------------------------------------------------------	
-    $query = "SELECT * FROM publicChat WHERE wifiid='$wifiid'";
+    
+    //$query = "SELECT * FROM publicchat WHERE wifiid='$wifiid'";  
+    $query = "SELECT * FROM publicchat";
     $result = pg_query($db, $query);
     // проверяем удачно ли соединились с базой 
     if (!$result) {die("sorry, something went wrong on the website, database query failed");}
