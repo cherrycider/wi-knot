@@ -62,13 +62,21 @@ header("Pragma: no-cache");
 	
 	
 		$button_save = "save";
+                $save_no_photo = "false";
 	
 	//после нажатия кнопки save на этой же странице делаем: 
 	// ----------------------------------------------------
 	if (isset($_POST['button_save'])) { $button_save = $_POST['button_save'];}
+        if (isset($_POST['save_no_photo'])) { $save_no_photo = $_POST['save_no_photo'];}
 	if ($button_save == 'saved') {
 		
-		$photo_file_name = $myrow['userid'];
+
+		if ($save_no_photo == 'no_photo') 
+			{ $photo_file_name = 'defpic';  }
+		
+		else {$photo_file_name = $myrow['userid'];}
+
+
 		// если еще фото не записано в базу или не такое же как userid
                 //if (!isset($myrow['photo']) or ($myrow['photo']!='') or ($myrow['photo']!=$myrow['userid'])){
          
@@ -340,6 +348,33 @@ header("Pragma: no-cache");
     </p>
 
 </form>
+
+
+
+
+ <form action="user_photo.php" method="post">
+
+    <p>    
+    <input name="button_save" type="text" size="15" maxlength="15" value="saved" hidden>
+    </p>
+<!--**** В спрятанном поле отправляем сообщение что клавиша save нажата ***** --> 
+
+    <p>    
+    <input name="save_no_photo" type="text" size="15" maxlength="15" value="no_photo" hidden>
+    </p>
+<!--**** В спрятанном поле отправляем сообщение что save without photo ***** -->
+
+
+    <p>
+    <input type="submit" name="no_photo" class='btn btn-default  knot-content-btn' value="save without photo"; ?>">
+<!--**** Кнопочка (type="submit") отправляет данные опять на эту же страничку user_photo.php  ***** --> 
+    </p>
+
+</form>
+
+
+
+
 
 <!-- **** если кнопка save превратилась в saved то появляется кнопка go to wi.knot -->
 
