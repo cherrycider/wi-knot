@@ -300,7 +300,27 @@ $(document).ready(function(){
 // scroll down all the messages after first load
 $("#chatbox").animate({ scrollTop: scrollHeight }, 'normal');
 
-	
+/*
+
+the db table columns MUST be in order:
+
+                            Table "public.publicchat"
+ Column  |  Type   | Collation | Nullable |                Default                 
+---------+---------+-----------+----------+----------------------------------------
+ id      | integer |           | not null | nextval('publicchat_id_seq'::regclass)
+ userid  | text    |           |          | 
+ name    | text    |           |          | 
+ photo   | text    |           |          | 
+ message | text    |           |          | 
+ time    | text    |           |          | 
+ ssid    | text    |           |          | 
+ bssid   | text    |           |          | 
+ wifiid  | text    |           |          | 
+Indexes:
+    "publicchat_pkey" PRIMARY KEY, btree (id)
+
+
+*/		
 	
 //declare method loadLog() that loads the file containing the chat log and scroll down if there are new messages
 	function loadLog(){

@@ -61,7 +61,7 @@
 			$chat->gravatar = Chat::gravatarFromHash($chat->gravatar);
 			
 			$chats[] = $chat;
-		}
+		}  
 	
 		return array('chats' => $chats);
 	}

@@ -255,10 +255,34 @@ var scrollHeight = $("#peoplebox").attr("scrollHeight") - 20;
 $(document).ready(function(){
 
 
+
+
 // scroll down all the messages after first load
 $("#peoplebox").animate({ scrollTop: scrollHeight }, 'normal');
 
-	
+/*
+
+the db table columns MUST be in order:
+
+                               Table "public.people"
+    Column    |  Type   | Collation | Nullable |              Default               
+--------------+---------+-----------+----------+------------------------------------
+ id           | integer |           | not null | nextval('people_id_seq'::regclass)
+ userid       | text    |           |          | 
+ email        | text    |           |          | 
+ name         | text    |           |          | 
+ password     | text    |           |          | 
+ photo        | text    |           |          | 
+ ssid         | text    |           |          | 
+ bssid        | text    |           |          | 
+ wifiid       | text    |           |          | 
+ onlinestatus | text    |           |          | 
+Indexes:
+    "people_pkey" PRIMARY KEY, btree (id)
+
+
+
+*/	
 	
 //declare method loadLog() that loads the file containing the chat log and scroll down if there are new messages
 	function loadLog(){
