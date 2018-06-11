@@ -84,7 +84,7 @@ header("Pragma: no-cache");
                 if (file_exists('user_photos/'. $photo_file_name .'.png')) {
 		
 			//дописываем имя файла в бд пользователя с таким же userid
-	            $query = "UPDATE people SET photo = '$photo_file_name' WHERE userid='$photo_file_name'";
+	            $query = "UPDATE people SET photo = '$photo_file_name' WHERE userid='$$userid'";
                 $result = pg_query ($db, $query);
 
             // проверяем удачно ли соединились с базой 
