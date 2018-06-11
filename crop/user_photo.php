@@ -84,7 +84,7 @@ header("Pragma: no-cache");
                 if (file_exists('user_photos/'. $photo_file_name .'.png')) {
 		
 			//дописываем имя файла в бд пользователя с таким же userid
-	            $query = "UPDATE people SET photo = '$photo_file_name' WHERE userid='$$userid'";
+	            $query = "UPDATE people SET photo = '$photo_file_name' WHERE userid='$userid'";
                 $result = pg_query ($db, $query);
 
             // проверяем удачно ли соединились с базой 
@@ -366,7 +366,7 @@ header("Pragma: no-cache");
 
 
     <p>
-    <input type="submit" name="no_photo" class='btn btn-default  knot-content-btn' value="save without photo"; ?>">
+    <input type="submit" name="no_photo" class='btn btn-default  knot-content-btn' value="save without photo"; ?>
 <!--**** Кнопочка (type="submit") отправляет данные опять на эту же страничку user_photo.php  ***** --> 
     </p>
 
