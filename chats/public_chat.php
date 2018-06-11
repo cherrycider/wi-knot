@@ -329,10 +329,10 @@ $("#chatbox").animate({ scrollTop: scrollHeight }, 'normal');
         
         //отдельные колонки      
         var chatname = data[i][2];
-        var chatphoto = data[i][8];
-        var chatssid = data[i][4];
-        var chattime = data[i][9];     // если ts то  time=data[i][10]        
-        var chatmsg = data[i][6];
+        var chatphoto = data[i][3];
+        var chatssid = data[i][6];
+        var chattime = data[i][5];     // если ts то  time=data[i][10]        
+        var chatmsg = data[i][4];
      //--------------------------------------------------------------------
      // 3) Update html content добавляем сообщения в html одно за другим
      //--------------------------------------------------------------------
