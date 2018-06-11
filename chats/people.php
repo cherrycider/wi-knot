@@ -288,7 +288,7 @@ $("#peoplebox").animate({ scrollTop: scrollHeight }, 'normal');
         var personID = data[i][6];		
         var personName = data[i][1];
         var personOnlineStatus = data[i][2];
-        var personPhoto = data[i][13];
+        var personPhoto = data[i][6];
  
      //--------------------------------------------------------------------
      // 3) Update html content добавляем сообщения в html одно за другим
