@@ -285,10 +285,10 @@ $("#peoplebox").animate({ scrollTop: scrollHeight }, 'normal');
         var personRow = data[i];
         
         //отдельные колонки 
-        var personID = data[i][6];		
-        var personName = data[i][1];
-        var personOnlineStatus = data[i][2];
-        var personPhoto = data[i][6];
+        var personID = data[i][1];		
+        var personName = data[i][3];
+        var personOnlineStatus = data[i][9];
+        var personPhoto = data[i][5];
  
      //--------------------------------------------------------------------
      // 3) Update html content добавляем сообщения в html одно за другим
